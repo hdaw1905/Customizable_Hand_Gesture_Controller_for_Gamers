@@ -1,4 +1,4 @@
-![Alt text](https://drive.google.com/file/d/1mviKFcO3Lz_hE1r9WiFcauaKPA4mBGun/view?usp=sharing](https://i.ibb.co/KFHNKnz/a.png)
+![Alt text](https://i.ibb.co/KFHNKnz/a.png)
 # Customizable Hand Gesture Controller for Gamers
 This project implements a customizable hand gesture controller for gamers using computer vision and machine learning. The system detects hand gestures in real-time video and maps them to various game controller inputs, providing a unique and immersive gaming experience.<br />
 
