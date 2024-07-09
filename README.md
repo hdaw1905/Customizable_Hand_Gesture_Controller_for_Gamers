@@ -10,10 +10,10 @@ This project implements a customizable hand gesture controller for gamers using 
 
 # Cloning the project 
 To clone the Customizable Hand Gesture Controller for Gamers project, follow these steps:<br />
-» Choose your IDE: You can use an Integrated Development Environment (IDE) like PyCharm or Visual Studio Code to clone the project.<br />
-» Open the Terminal: Once you have your IDE open, locate the terminal or command prompt within your IDE. The location of the terminal may vary depending on your IDE, but it is typically accessible through a menu or shortcut.<br />
-» Navigate to the Desired Directory: In the terminal, navigate to the directory where you want to clone the project. You can use the cd (change directory) command to navigate to the desired location on your local machine.<br />
-» Clone the Repository: In the terminal, type the following command to clone the repository:<br />
+1- Choose your IDE: You can use an Integrated Development Environment (IDE) like PyCharm or Visual Studio Code to clone the project.<br />
+2- Open the Terminal: Once you have your IDE open, locate the terminal or command prompt within your IDE. The location of the terminal may vary depending on your IDE, but it is typically accessible through a menu or shortcut.<br />
+3- Navigate to the Desired Directory: In the terminal, navigate to the directory where you want to clone the project. You can use the cd (change directory) command to navigate to the desired location on your local machine.<br />
+4- Clone the Repository: In the terminal, type the following command to clone the repository:<br />
 ```ruby
 git clone https://github.com/hdaw1905/Customizable_Hand_Gesture_Controller_for_Gamers.git   
 ```
