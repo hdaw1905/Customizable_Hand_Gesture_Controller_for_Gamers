@@ -68,6 +68,7 @@ Navigate to any online game website that you can play using the WASD keys for mo
 
 4- Use the hand gestures to control the game:<br />
 Perform the following hand gestures while playing the game:<br />
+
 ![Alt text](https://i.ibb.co/ByX1NzM/Picture1.png)
 'W' key presses (forward)<br />
 'S' key presses (backward)<br />
