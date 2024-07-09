@@ -48,5 +48,5 @@ pip install seaborn
 
 
 
-# Refrences 
+# References 
 Takahashi, S. (2020). hand-gesture-recognition-using-mediapipe [Computer software]. https://github.com/Kazuhito00/hand-gesture-recognition-using-mediapipe
