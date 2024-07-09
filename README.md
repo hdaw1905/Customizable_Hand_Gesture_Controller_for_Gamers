@@ -81,6 +81,6 @@ The hand gestures will be detected in real-time, and the corresponding keyboard 
 Soon .................
 
 # References 
-Takahashi, S. (2020). hand-gesture-recognition-using-mediapipe [Computer software]. https://github.com/Kazuhito00/hand-gesture-recognition-using-mediapipe
+Takahashi, S. (2020). hand-gesture-recognition-using-mediapipe [Computer software]. <br />https://github.com/Kazuhito00/hand-gesture-recognition-using-mediapipe
 https://github.com/google-ai-edge/mediapipe
 
