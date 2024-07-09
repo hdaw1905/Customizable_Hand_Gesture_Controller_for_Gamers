@@ -82,9 +82,9 @@ Soon .................
 
 # To Do List
 ```[tasklist]
-### My tasks
-- [ ] https://github.com/octo-org/octo-repo/issues/45
-- [ ] Draft task
+[ ] Expand the number of supported hand gestures.
+[ ] Build a GUI for the program for the ease of adding custmoized Hand Gesture .
+[ ] Implement the program using Unity for a 3D game experience.
 ```
 # References 
 Takahashi, S. (2020). hand-gesture-recognition-using-mediapipe [Computer software]. <br />
