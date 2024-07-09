@@ -1,6 +1,7 @@
-![Alt text](https://i.ibb.co/8dpfTvv/Picture2.png)
 # Customizable Hand Gesture Controller for Gamers
 This project implements a customizable hand gesture controller for gamers using computer vision and machine learning. The system detects hand gestures in real-time video and maps them to various game controller inputs, providing a unique and immersive gaming experience.<br />
+
+![Alt text](https://i.ibb.co/8dpfTvv/Picture2.png)
 
 # Key Features
 » Real-time Hand Gesture Recognition: The system utilizes advanced computer vision algorithms to accurately detect and track hand movements in the video feed.<br />
@@ -47,7 +48,36 @@ pip install tf-keras
 pip install seaborn
 ```
 
+# How To Run 
+1- Navigate to the project directory:<br />
+```ruby
+cd Customizable_Hand_Gesture_Controller_for_Gamers
+```
+Then <br />
+```ruby
+cd hand-gesture-recognition-mediapipe
+```
+2- Run the app.py file:<br />
+```ruby
+python app.py
+```
+This will start the hand gesture recognition and mapping to the assigned keyboard keys.<br />
 
+3- Open an online game in your web browser:<br />
+Navigate to any online game website that you can play using the WASD keys for movement.<br />
+
+4- Use the hand gestures to control the game:<br />
+Perform the following hand gestures while playing the game:<br />
+![Alt text](https://i.ibb.co/ByX1NzM/Picture1.png)
+'W' key presses (forward)<br />
+'S' key presses (backward)<br />
+'A' key presses (left)<br />
+'D' key presses (right)<br />
+
+The hand gestures will be detected in real-time, and the corresponding keyboard inputs will be sent to the game, allowing you to control the game using your hand movements.
+
+# How to add cutsom hand gestures for specifc controller
+Soon .................
 
 # References 
 Takahashi, S. (2020). hand-gesture-recognition-using-mediapipe [Computer software]. https://github.com/Kazuhito00/hand-gesture-recognition-using-mediapipe
