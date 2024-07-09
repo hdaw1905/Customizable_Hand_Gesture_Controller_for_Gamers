@@ -77,7 +77,7 @@ Perform the following hand gestures while playing the game:<br />
 
 The hand gestures will be detected in real-time, and the corresponding keyboard inputs will be sent to the game, allowing you to control the game using your hand movements.
 
-# How to add cutsom hand gestures for specifc controller
+# How to add cutsom hand gestures for specific controller
 Soon .................
 
 # References 
