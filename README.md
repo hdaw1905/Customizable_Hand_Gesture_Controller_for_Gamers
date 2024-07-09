@@ -80,6 +80,12 @@ The hand gestures will be detected in real-time, and the corresponding keyboard 
 # How to add cutsom hand gestures for specific controller
 Soon .................
 
+# To Do List
+```[tasklist]
+### My tasks
+- [ ] https://github.com/octo-org/octo-repo/issues/45
+- [ ] Draft task
+```
 # References 
 Takahashi, S. (2020). hand-gesture-recognition-using-mediapipe [Computer software]. <br />
 https://github.com/Kazuhito00/hand-gesture-recognition-using-mediapipe<br />
