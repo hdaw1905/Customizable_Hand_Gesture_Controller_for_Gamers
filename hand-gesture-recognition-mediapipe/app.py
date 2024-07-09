@@ -11,7 +11,6 @@ import cv2 as cv
 import numpy as np
 
 import mediapipe as mp
-mp_face_mesh = mp.solutions.face_mesh
 
 from utils import CvFpsCalc
 from model import KeyPointClassifier
@@ -68,14 +67,6 @@ def main():
         min_detection_confidence=min_detection_confidence,
         min_tracking_confidence=min_tracking_confidence,
 
-    )
-
-    # Initialize face mesh model
-    face_mesh = mp_face_mesh.FaceMesh(
-        max_num_faces=1,
-        refine_landmarks=True,
-        min_detection_confidence=0.5,
-        min_tracking_confidence=0.5
     )
 
     keypoint_classifier = KeyPointClassifier()
