@@ -8,8 +8,14 @@ import os
 os.environ["TF_USE_LEGACY_KERAS"] = "1"
 
 RANDOM_SEED = 42
-dataset = "C:/Users/hesha/OneDrive/Desktop/Hand_Gesture_Controller/Visual Entry/ArabicHandGesture/ArabicHandGesture/hand-gesture-recognition-mediapipe/model/keypoint_classifier/keypoint.csv"
-model_save_path = "C:/Users/hesha/OneDrive/Desktop/Hand_Gesture_Controller/Visual Entry/ArabicHandGesture/ArabicHandGesture/hand-gesture-recognition-mediapipe/model/keypoint_classifier/keypoint_classifier.hdf5"
+import pandas as pd
+
+# Get the current directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# Construct the file path
+dataset = os.path.join(current_dir, 'keypoint.csv')
+# Load the model
+model_save_path = os.path.join(current_dir, 'keypoint_classifier.hdf5')
 NUM_CLASSES = 5
 X_dataset = np.loadtxt(dataset, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 1)))
 y_dataset = np.loadtxt(dataset, delimiter=',', dtype='int32', usecols=(0))
@@ -26,15 +32,15 @@ model = tf.keras.models.Sequential([
 
 model.summary()  # tf.keras.utils.plot_model(model, show_shapes=True)
 
-# モデルチェックポイントのコールバック
-model_save_path = "C:/Users/hesha/OneDrive/Desktop/Hand_Gesture_Controller/Visual Entry/ArabicHandGesture/ArabicHandGesture/hand-gesture-recognition-mediapipe/model/keypoint_classifier/keypoint_classifier.keras"
+# Model Checkpoint Callbacks
+model_save_path = os.path.join(current_dir, 'keypoint_classifier.keras')
 cp_callback = tf.keras.callbacks.ModelCheckpoint(
     model_save_path, verbose=1, save_weights_only=False)
 
-# 早期打ち切り用コールバック
+# Early Stopping Callback
 es_callback = tf.keras.callbacks.EarlyStopping(patience=20, verbose=1)
 
-# モデルコンパイル
+# Model Compile
 model.compile(
     optimizer='adam',
     loss='sparse_categorical_crossentropy',
@@ -51,13 +57,13 @@ model.fit(
 )
 
 
-# モデル評価
+# Model Evaluation
 val_loss, val_acc = model.evaluate(X_test, y_test, batch_size=128)
 
-# 保存したモデルのロード
+# Loading a Saved Model
 model = tf.keras.models.load_model(model_save_path)
 
-# 推論テスト
+# Inference Testing
 predict_result = model.predict(np.array([X_test[0]]))
 print(np.squeeze(predict_result))
 print(np.argmax(np.squeeze(predict_result)))
@@ -89,11 +95,11 @@ y_pred = np.argmax(Y_pred, axis=1)
 
 print_confusion_matrix(y_test, y_pred)
 
-# 推論専用のモデルとして保存
+# Save the model as an inference-only model
 model.save(model_save_path)
 
-# モデルを変換(量子化)
-tflite_save_path = "C:/Users/hesha/OneDrive/Desktop/Hand_Gesture_Controller/Visual Entry/ArabicHandGesture/ArabicHandGesture/hand-gesture-recognition-mediapipe/model/keypoint_classifier/keypoint_classifier.tflite"
+# Model Conversion (Quantization)
+tflite_save_path = os.path.join(current_dir, 'keypoint_classifier.tflite')
 
 converter = tf.lite.TFLiteConverter.from_keras_model(model)
 converter.optimizations = [tf.lite.Optimize.DEFAULT]
@@ -104,14 +110,14 @@ open(tflite_save_path, 'wb').write(tflite_quantized_model)
 interpreter = tf.lite.Interpreter(model_path=tflite_save_path)
 interpreter.allocate_tensors()
 
-# 入出力テンソルを取得
+# Retrieve the Input and Output Tensors
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
 interpreter.set_tensor(input_details[0]['index'], np.array([X_test[0]]))
 
 
-# 推論実施
+# Perform Inference
 interpreter.invoke()
 tflite_results = interpreter.get_tensor(output_details[0]['index'])
 
