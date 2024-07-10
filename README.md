@@ -92,6 +92,7 @@ After you've finished training the **new hand gesture**, you need to run the **k
 
 Put the cursor in a **word file** or **text file**, then make the new hand gesture in front of the **webcam**, and see if the keyboard letter you assigned has been typed. Finally, you can try the new hand gesture in online games.<br />
 
+You can repeat the same steps over and over to add more hand gestures and expand the functionality of your system<br />
 # To Do List
 ```[tasklist]
 [ ] Expand the number of supported hand gestures.
