@@ -78,15 +78,15 @@ Perform the following hand gestures while playing the game:<br />
 The hand gestures will be detected in real-time, and the corresponding keyboard inputs will be sent to the game, allowing you to control the game using your hand movements.
 
 # How to add cutsom hand gestures for specific controller
-In the keypoint_classification.py file, you'll find the line NUM_CLASSES = 5, which specifies the number of assigned keys for the hand gestures. If you need to add a new hand gesture, you'll need to increase the number of classes to 6.<br />
+In the **keypoint_classification.py** file, you'll find the **line NUM_CLASSES = 5**, which specifies the number of assigned keys for the hand gestures. If you need to add a new hand gesture, you'll need to increase the number of classes to 6.<br />
 
-Next, go to the keypoint_classifier_label.csv file and add a new line with the 6th letter you want to be pressed on the keyboard. For example, if you want your new hand gesture to press the "E" key, add "E" on a new line without pressing Enter.<br />
+Next, go to the **keypoint_classifier_label.csv** file and add a new line with the **6th letter** you want to be pressed on the keyboard. For example, if you want your new hand gesture to press the **"E"** key, add **"E"** on a new line without pressing Enter.<br />
 
-Note that since we have already assigned 5 letters to hand gestures, you only still have 5 possibilities, and you could erase all the 5 already given possibilities and you'll have 10 possibilities.<br />
+Note that since we have already assigned **5 letters to hand gestures**, you only still have **5 possibilities** remaining, and you could erase all the **5 already given possibilities** and you'll have **10** possibilities.<br />
 
-After that, go to the app.py file and run the code. Press the "K" key to enter the Logging Keypoint mode. In this mode, you'll need to press a number between 0-9 to add your new hand gesture.<br />
+After that, go to the **app.py** file and run the code. Press the **"K"** key to enter the **Logging Keypoint mode**. In this mode, you'll need to press a number between **0-9** to add your new hand gesture.<br />
 
-Since the classes start at index 0, your new class 6 will start at index 5. So, in the Logging Keypoint mode, you'll need to press the number 5 multiple times to train your new hand gesture. Try tilting your hand, changing its orientation, bringing it closer to the webcam, and moving it farther away while pressing 5 each time. The more variations you provide, the better the training will be.<br />
+Since the classes start at **index 0**, your new **class 6** will start at **index 5**. So, in the **Logging Keypoint mode**, you'll need to press the **number 5** multiple times to **train** your new hand gesture. **Try tilting your hand**, **changing its orientation**, **bringing it closer to the webcam**, and **moving it farther away** while pressing 5 each time. The more variations you provide, the better the training will be.<br />
 
 # To Do List
 ```[tasklist]
