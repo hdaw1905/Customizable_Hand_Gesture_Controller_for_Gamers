@@ -88,6 +88,10 @@ After that, go to the **app.py** file and run the code. Press the **"K"** key to
 
 Since the classes start at **index 0**, your new **class 6** will start at **index 5**. So, in the **Logging Keypoint mode**, you'll need to press the **number 5** multiple times to **train** your new hand gesture. **Try tilting your hand**, **changing its orientation**, **bringing it closer to the webcam**, and **moving it farther away** while pressing 5 each time. The more variations you provide, the better the training will be.<br />
 
+After you've finished training the **new hand gesture**, you need to run the **keypoint_classification.py** file to train the registered hand gestures that you have assigned. Then, when you go to **app.py** and run it, you can test the new hand gesture.<br /> 
+
+Put the cursor in a **word file** or **text file**, then make the new hand gesture in front of the **webcam**, and see if the keyboard letter you assigned has been typed. Finally, you can try the new hand gesture in online games.<br />
+
 # To Do List
 ```[tasklist]
 [ ] Expand the number of supported hand gestures.
